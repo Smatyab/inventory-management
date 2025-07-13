@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".admin.Home">
+
+<!--    <include layout="@layout/toolbar"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lblhome">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="3">
+
+        <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_dashboard"
+        style="@style/homeCardView"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/lightpri2"
+            tools:ignore="ExtraText,UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/img_cardview_dashbord"
+                style="@style/homeCardViewImage"
+                android:src="@drawable/dashboard_24px"
+                android:contentDescription="TODO"
+                tools:ignore="ContentDescription,HardcodedText" />
+
+            <TextView
+                style="@style/homeCardViewText"
+                android:layout_marginBottom="10dp"
+                android:text="Dashboard"
+                tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_add_employee"
+            style="@style/homeCardView"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="end">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/lightpri2"
+                tools:ignore="ExtraText,UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/img_cardview_adduser"
+                    style="@style/homeCardViewImage"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/group_add_24px"
+                    tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+                <TextView
+                    style="@style/homeCardViewText"
+                    android:text="Add Employee"
+                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_lowstock"
+            style="@style/homeCardView"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/lightpri2"
+                tools:ignore="ExtraText,UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/img_cardview_lowstock"
+                    style="@style/homeCardViewImage"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/lowstock"
+                    tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+                <TextView
+                    style="@style/homeCardViewText"
+                    android:layout_marginBottom="10dp"
+                    android:text="Low Stock"
+                    tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_transaction"
+            style="@style/homeCardView"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="end">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/lightpri2"
+                tools:ignore="ExtraText,UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/img_cardview_transaction"
+                    style="@style/homeCardViewImage"
+                    android:src="@drawable/receipt_long_24px"
+                    android:contentDescription="TODO"
+                    tools:ignore="ContentDescription,HardcodedText" />
+
+                <TextView
+                    style="@style/homeCardViewText"
+                    android:text="Transactions"
+                    tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_addproduct"
+            style="@style/homeCardView"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/lightpri2"
+                tools:ignore="ExtraText,UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/img_cardview_addproducts"
+                    style="@style/homeCardViewImage"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/inventory_2_24px"
+                    tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+                <TextView
+                    style="@style/homeCardViewText"
+                    android:layout_marginBottom="10dp"
+                    android:text="Products"
+                    tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck,TextContrastCheck" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_addcategory"
+            style="@style/homeCardView"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="end">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/lightpri2"
+                tools:ignore="ExtraText,UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/img_cardview_addcategory"
+                    style="@style/homeCardViewImage"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/outline_create_new_folder_24"
+                    tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+                <TextView
+                    style="@style/homeCardViewText"
+                    android:layout_marginBottom="10dp"
+                    android:text="Category"
+                    tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck,TextContrastCheck" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_settings"
+            style="@style/homeCardView"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="22dp"
+            android:layout_gravity="end">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/lightpri2"
+                tools:ignore="ExtraText,UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/img_cardview_setting"
+                    style="@style/homeCardViewImage"
+                    android:src="@drawable/settings"
+                    android:contentDescription="TODO"
+                    tools:ignore="ContentDescription,HardcodedText" />
+
+                <TextView
+                    style="@style/homeCardViewText"
+                    android:text="Settings"
+                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </GridLayout>
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/flbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_add_remove"
+            style="@style/floatbtn"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:drawableTop="@drawable/baseline_storefront_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+
+
+        <Button
+            android:id="@+id/btn_add_product"
+            style="@style/floatbtnaddremove"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="160dp"
+            android:text="Add Product"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_add_transaction"
+            style="@style/floatbtnaddremove"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="100dp"
+            android:text="Add Transaction"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/lblhome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:padding="10dp"
+        android:text="Home"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+
+</RelativeLayout>

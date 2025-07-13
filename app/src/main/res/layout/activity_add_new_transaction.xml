@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/loginback"
+    tools:context=".common.LoginActivity">
+
+    <ImageButton
+        android:id="@+id/backbtnhomeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:background="@drawable/baseline_arrow_back_24"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    <ImageButton
+        android:id="@+id/backbtnhomeat_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:background="@drawable/baseline_arrow_back_24"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/formBackground">
+
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:id="@+id/buyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy"
+                />
+
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:id="@+id/sellButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sell"
+                />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/transactionProductIdTextInputLayout"
+            style="@style/primaryTextInputLayout"
+            android:hint="Product Id"
+            tools:ignore="HardcodedText">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTextProductName"
+                style="@style/primaryTextInputEditText"
+                android:inputType="text"
+                android:focusable="false"
+                android:clickable="true"
+                tools:ignore="TextSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/productDateTextInputLayout"
+            style="@style/primaryTextInputLayout"
+            android:hint="Select a Date"
+            tools:ignore="HardcodedText">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTextDate"
+                style="@style/primaryTextInputEditText"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                tools:ignore="TextSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/productQtyTextInputLayout"
+            style="@style/primaryTextInputLayout"
+            android:hint="Quantity"
+            tools:ignore="HardcodedText">
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/primaryTextInputEditText"
+                android:inputType="number"
+                tools:ignore="TextSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/transactionPriceTextInputLayout"
+            style="@style/primaryTextInputLayout"
+            android:hint="Price (Per Unit)"
+            tools:ignore="HardcodedText">
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/primaryTextInputEditText"
+                android:inputType="number"
+                tools:ignore="TextSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addTransactionButton"
+            android:text="Add Transaction"/>
+
+    </LinearLayout>
+</RelativeLayout>

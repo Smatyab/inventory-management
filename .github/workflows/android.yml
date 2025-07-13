@@ -1,0 +1,50 @@
+name: Build and Release APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build and Release APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: 17
+          distribution: 'adopt'
+
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+            
+      - name: Build APK
+        run: |
+          java -version
+          chmod +x gradlew
+          ./gradlew assembleDebug
+          
+      - name: Create Directory
+        run: mkdir -p releases
+        
+      - name: Copy APK to Releases Directory
+        run: cp app/build/outputs/apk/debug/app-debug.apk releases/app-v${{ github.run_number }}.apk
+
+      - name: Commit and Tag
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add releases
+          git commit -m "Add release APK for v${{ github.run_number }}"
+          git tag "v${{ github.run_number }}"
+          git push --follow-tags

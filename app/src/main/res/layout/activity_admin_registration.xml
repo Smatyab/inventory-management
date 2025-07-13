@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registerback"
+    tools:context=".common.AdminRegistrationActivity">
+
+
+    <ImageButton
+        android:id="@+id/reg_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/baseline_arrow_back_24"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:padding="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            style="@style/formTitle"
+            android:text="Register"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/display_name"
+            style="@style/primaryTextInputLayout"
+            android:hint="Display Name"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/primaryTextInputEditText"
+                android:inputType="text"
+                tools:ignore="TextSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_email_admin_reg"
+            style="@style/primaryTextInputLayout"
+            android:hint="demo@email.com"
+            tools:ignore="HardcodedText">
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/primaryTextInputEditText"
+                android:drawableStart="@drawable/baseline_email_24"
+                android:inputType="textEmailAddress"
+                tools:ignore="TextSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_password_admin_reg"
+            style="@style/primaryTextInputLayout"
+            android:hint="Password"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/primaryTextInputEditText"
+                android:drawableStart="@drawable/baseline_lock_24"
+                android:inputType="textPassword"
+                tools:ignore="TextSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_company_admin_reg"
+            style="@style/primaryTextInputLayout"
+            android:hint="Company Name"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/primaryTextInputEditText"
+                android:drawableStart="@drawable/baseline_business_24"
+                android:inputType="text"
+                tools:ignore="TextSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_admin_signin"
+                style="@style/formBtn"
+                android:minHeight="48dp"
+                android:text="Create Account"
+                tools:ignore="HardcodedText,VisualLintButtonSize,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/openlog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_admin_signin"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:text="Go Back To LOGIN"
+                android:textAlignment="center"
+                android:textColor="@color/pri2"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,TextSizeCheck,TouchTargetSizeCheck" />
+
+            <ProgressBar
+                android:id="@+id/rProgressBar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="130dp"
+                android:visibility="gone"
+                android:progressTint="@color/sec" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
